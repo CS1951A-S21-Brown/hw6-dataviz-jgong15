@@ -15,14 +15,22 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+            <h3>Part 1: Video Game Sales</h3>
+            <!-- <h5>Top 10 Games By Year</h5> -->
+            <select name="topGamesSelect" id="topGamesSelect">
+                <option value="All">All</option>
+            </select>
+            <button type="button" class="btn btn-info" onclick="setData_topGamesButton()">Update</button>
+            <div id="topGames"></div>
+            <!-- <div id="graph2"></div><br/> -->
         </div>
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
+            <h3>Part 2: International Football Results</h3>
             <div id="graph3"></div>
-        </div>
+        </div> -->
     </div>
     <!--Feel free to add more JavaScript files as needed-->
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/vg/topGames.js"></script>
 </body>
 </html>
