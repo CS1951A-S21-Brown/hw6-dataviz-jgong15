@@ -71,7 +71,6 @@ function setData_genrePublishers(genre) {
     );
 
     // TODO: Update the x axis domain with the max count of the provided data
-    // console.log(data)
     x_genrePublishers.domain([0, d3.max(data, function(d) {return d.value})]);
 
     // TODO: Update the y axis domains with the desired attribute
@@ -109,7 +108,7 @@ function setData_genrePublishers(genre) {
         .attr("fill", function(d) { return color(d.key) })
         .transition()
         .duration(1000)
-        .attr("x", x(0))
+        .attr("x", x_genrePublishers(0))
         .attr("y", function(d) { return y_genrePublishers(d.key) })               // HINT: Use function(d) { return ...; } to apply styles based on the data point
         .attr("width", function(d) { return x_genrePublishers(d['value'])} )
         .attr("height",  y_genrePublishers.bandwidth());        // HINT: y.bandwidth() makes a reasonable display height
@@ -119,7 +118,6 @@ function setData_genrePublishers(genre) {
         bar plot. We will be creating these in the same manner as the bars.
      */
     let counts = countRef_genrePublishers.selectAll("text").data(data);
-    console.log(counts);
 
     // TODO: Render the text elements on the DOM
     counts.enter()
