@@ -21,37 +21,37 @@ function getUniques(data, attr) {
   return d3.map(data, function(d){return d[attr]}).keys().sort();
 };
 
-function filterYear(data, year, attr) {
-    if (year == "All") {
+function filterVG(data, target, attr) {
+    if (target == "All") {
       return data
     } else {
-      return data.filter(function(a) { return a[attr] === (year); });
+      return data.filter(function(a) { return a[attr] === (target); });
     }
 };
 
-function update_yearSelect(years, elementID) {
+function update_Select(uniques, elementID) {
   let select = document.getElementById(elementID);
   // console.log(select[0].value);
   let newList = [];
-  for(i = 0; i < years.length; i++) {
-    let year = years[i];
+  for(i = 0; i < uniques.length; i++) {
+    let unique = uniques[i];
     let isNew = true;
     for(j = 0; j < select.length; j++) {
       // console.log(j);
-      if (select[j].value == year) {
+      if (select[j].value == unique) {
         isNew = false;
         break;
       }
     }
 
     if (isNew) {
-      newList.push(year);
+      newList.push(unique);
 
     }
   }
   for (i = 0; i < newList.length; i++) {
-    let year = newList[i];
-    let newOption = new Option(year, year);
+    let unique = newList[i];
+    let newOption = new Option(unique, unique);
     select.add(newOption, undefined);
   }
 };
