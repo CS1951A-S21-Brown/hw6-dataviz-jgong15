@@ -25,6 +25,16 @@
     </div>
     <div class="row">
       <div class="col-lg-6">
+          <select name="regionGenresSelect" id="regionGenresSelect">
+              <option value="All">All</option>
+          </select>
+          <button type="button" class="btn btn-info" onclick="setData_regionGenresButton()">Update</button>
+          <div id="regionGenres"></div>
+          <!-- <div id="graph2"></div><br/> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
           <select name="genrePublishersSelect" id="genrePublishersSelect">
               <option value="All">All</option>
           </select>
@@ -33,9 +43,89 @@
           <!-- <div id="graph2"></div><br/> -->
       </div>
     </div>
+    <div class="row">
+      <div class="header">
+          <h3>Written Questions</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+          <h4>1) Answering the questions</h4>
+          <p>
+            - Graph 1 answers Question 1 by showing the top 10 video games
+            in a selected year (using the select element), ordered by global
+            sales.
+          </p>
+          <p>
+            - Graph 2 answers the Question 2 by showing the relative shares of the
+            top 10 genres in a selected region (using the select element), with
+            a tooltip on hover displaying genre and gross sales.
+          </p>
+          <p>
+            - Graph 1 answers Question 1 by showing the top 10 publishers in a
+            selected genre (using the select element), ordered by global
+            sales.
+          </p>
+          <h4>2) Role of D3</h4>
+          <p>
+            - One role of D3 is the possiblity of being able to display data in a
+            webpage format, rather than in a separate application such as word
+            or a PNG.
+          </p>
+          <p>
+            - Another role of D3 is the the ability to customize the type of information
+            displayed, especially in comparison to an alternative like excel.
+          </p>
+          <p>
+            - A third role of D3 is the ability to inserte interactive elements
+            into data, such as select systems and tooltips on hover.
+          </p>
+          <h4>3) Why not D3?</h4>
+          <p>
+            One time D3 is not the best is when visualizing data in a non-web context,
+            such as when making a powerpoint presentation.
+          </p>
+          <p>
+            Another time D3 is not the best is when wanting to make a quick chart,
+            and a tool like Plotly may be better.
+          </p>
+          <p>
+            A third time D3 is not the best is when you need greater control,
+            as a tool like Matplotlib may be more capable.
+          </p>
+          <h4>4) Accessibility</h4>
+          <p>
+            One accesibility issue is that in my second graph (the Pie Chart)
+            one cannot see the information points without hovering over the
+            sections of the pie (as is advised against in the gif of
+            Amanda Miller's article). This can be cured by adding labels to the
+            pie chart indicating the related genre (unfortuately technical
+            difficulties prevented this from working).
+          </p>
+          <p>
+            A second accessiblity issue is that my two bar graphs may be difficult
+            to read for the colorblind, particulary for those with tritanopia.
+          </p>
+          <h4>5) Missed Opportunities</h4>
+          <p>
+            I could have added visible information to my pie chart to indicate
+            what genre each section represented. What prevented me from doing
+            this was time limitations preventing me from fully resolving an
+            underlying programming issue.
+          </p>
+          <p>
+            I could have spent more time making sure that the colors of my bar
+            graphs and pie graph were unique and more accessible to the
+            colorblind. What prevented me from doing this was primarily time
+            limitations. This is, however, partially mitigated by the spaces
+            between different parts of graphs.
+          </p>
+      </div>
+    </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/topGames.js"></script>
     <script type="text/javascript" src="js/genrePublishers.js"></script>
+    <script type="text/javascript" src="js/regionGenres.js"></script>
 </body>
 </html>

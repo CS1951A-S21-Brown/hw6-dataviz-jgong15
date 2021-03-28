@@ -31,7 +31,6 @@ function filterVG(data, target, attr) {
 
 function update_Select(uniques, elementID) {
   let select = document.getElementById(elementID);
-  // console.log(select[0].value);
   let newList = [];
   for(i = 0; i < uniques.length; i++) {
     let unique = uniques[i];
